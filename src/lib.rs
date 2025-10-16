@@ -89,4 +89,3 @@ fn link(_: Request, cx: RouteContext<Config>) -> Result<Response> {
     let trojan_link = format!("trojan://{uuid}@{host}:443?encryption=none&type=ws&host={host}&path=%2FID&security=tls&sni={host}#beatrice trojan");
     let ss_link = format!("ss://{}@{host}:443?plugin=v2ray-plugin%3Btls%3Bmux%3D0%3Bmode%3Dwebsocket%3Bpath%3D%2FID%3Bhost%3D{host}#beatrice ss", URL_SAFE.encode(format!("none:{uuid}")));
     
-    Response::from_body(ResponseBody::Body(format!("{vmess_link}\n{vless_link}\n{trojan_link}\n{ss_link}").into()))
