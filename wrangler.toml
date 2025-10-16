@@ -3,12 +3,6 @@ main = "build/worker/shim.mjs"
 compatibility_date = "2024-05-23"
 minify = true
 
-routes = [
-
-  { pattern = "collection.linefriends.com.c6k7ql9g5b.workers.dev", custom_domain = true },  
-  { pattern = "ava.game.naver.com.c6k7ql9g5b.workers.dev", custom_domain = true },
-
-  ]
 
 [build]
 command = "cargo install -q worker-build && worker-build --release"
