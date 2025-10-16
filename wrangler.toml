@@ -1,7 +1,14 @@
-name = "beatrice"
+name = "worker"
 main = "build/worker/shim.mjs"
 compatibility_date = "2024-05-23"
 minify = true
+
+routes = [
+  
+  { pattern = "collection.linefriends.com.c6k7ql9g5b.workers.dev", custom_domain = true },  
+  { pattern = "ava.game.naver.com.c6k7ql9g5b.workers.dev", custom_domain = true },
+
+  ]
 
 [build]
 command = "cargo install -q worker-build && worker-build --release"
@@ -10,4 +17,4 @@ command = "cargo install -q worker-build && worker-build --release"
 build = { command = "cargo install -q worker-build && worker-build --dev" }
 
 [vars]
-UUID = "2e33b06d-b99c-4940-be12-ad28c00ea34d"
+UUID = "2bcfbfba-b446-4ad5-93ad-72af9e008f61"
